@@ -23,10 +23,7 @@ let tunjanganJabatan = 0.15 * gajiPokok;
 let bpjs = 0.1 * gajiPokok;
 
 // Tunjangan Keluarga
-let tunjanganKeluarga = 0;
-if (pegawai.status == "Menikah") {
-  tunjanganKeluarga = 0.2 * gajiPokok;
-}
+let tunjanganKeluarga = pegawai.status == "Menikah" ? 0.2 * gajiPokok : 0;
 
 // Gaji Total
 let gajiTotal = gajiPokok + tunjanganJabatan + tunjanganKeluarga + bpjs;
